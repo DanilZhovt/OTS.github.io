@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Entertainment Assistant</title>
+	<link rel="icon" type="image/png" href="pics/logo.png"/>
+	<meta property="og:image" content="pics/mbg.png"/>
+	<link rel="stylesheet" href="styles.css"/>
+	<link rel="stylesheet" href="contactus.css"/>
+</head>
+<body>
+	<!-- NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION -->
+	<header class="navbar">
+		<a href="index.html" class="logoContainer mainLink">
+			<img src="pics/logo.png" alt="ea logo" id="navbarLogo">
+			<p>Entertainment Assistant</p>
+		</a>
+		<div class="menuToggle">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+		<ul class="navbarMenu">
+			<a href="index.html" class="navbarLink lngAbout mainLink" id="aboutButton">About</a>
+			<a href="download.html" class="navbarLink lngDownload mainLink" id="downloadButton">Download</a>
+			<a href="support.html" class="navbarLink lngHelp mainLink" id="supportButton">Help</a>
+			<a href="contactus.html" class="navbarLink lngContactUs mainLink" id="contactUsButton">Contact us</a>
+		</ul>
+		<div class="langContainer">
+			<div class="selectedLang">
+				<p class="lngSelected">English</p>
+				<img src="pics/langs/en.png" alt="lang image">
+			</div>
+			<ul>
+				<li class="en">
+					<img src="pics/langs/en.png" alt="lang image">
+					<a>English</a>
+				</li>
+				<li class="ru">
+					<img src="pics/langs/ru.png" alt="lang image">
+					<a>Русский</a>
+				</li>
+				<li class="jp">
+					<img src="pics/langs/jp.png" alt="lang image">
+					<a>日本</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<!-- BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY -->
+	<!-- COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER -->
+	<div id="main">
+        <div id="mainPanel">
+            <form id="formBox" onsubmit="sendEmail();">
+				<a class="lngReadBefore">Before messaging us, please check out our FAQs, as your question may have already been addressed.</a>
+				<div id="textBox">
+					<div id="detailsColumn">
+						<div class="column">
+							<a class="lngQType">Type of your question</a>
+							<select id="messageType" class="input">
+								<option value="AppTechQ" class="lngAppQ">Application techincal question</option>
+								<option value="CoopQ" class="lngCoopQ"">Cooperation</option>
+								<option value="AppIdea" class="lngAppIdea">Application idea</option>
+								<option value="GeneralQ" class="lngGeneralQ">General question</option>
+							</select>
+						</div>
+						<div class="column">
+							<a class="lngQEmail">Your email</a>
+							<input class="input" type="text" id="mail" placeholder="samplemail@com.mail" required>
+						</div>
+						<div class="column">
+							<a class="lngQConfirm">Confirm your email</a>
+							<input class="input" type="text" id="mailTest" placeholder="samplemail@com.mail" required>
+							<a id="wrong" class="lngWrongEmail">Emails don't match</a>
+						</div>
+						<div class="column">
+							<a class="lngQSubject">Subject</a>
+							<input class="input" type="text" id="subject" required>
+						</div>
+					</div>
+					<div id="messageColumn">
+						<a class="lngQMessage">Message</a>
+						<textarea class="input" id="message" cols="20" rows="15" required></textarea>
+					</div>
+				</div>
+				<div>
+					<button type="submit" class="lngContactSend input">Send</button>
+					<a id="sent" class="lngSentEmail">Sent!</a>
+				</div>
+            </form>
+        </div>
+	</div>
+
+	<!-- SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS -->
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="contactus.js"></script>
+	<script src="lang.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
