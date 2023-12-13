@@ -1,8 +1,8 @@
 :root {
     --colorBackground: #000000;
-    --colorPanel: #dd4430;
-    --colorSelection: #d55e3e;
-    --colorText: rgb(247, 216, 183);
+    --colorPanel: #000000;
+    --colorSelection: #dd4430;
+    --colorText: #c7945a;
     --colorSpec: #dd4430;
 }
 
@@ -38,7 +38,7 @@ body, html {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 2.5rem;
+    font-size: 2rem;
     position: fixed;
     top: 0px;
     z-index: 100;
@@ -69,94 +69,16 @@ body, html {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1rem;
-    color: var(--colorText);
+    font-size: 2rem;
+    color: #dd4430;
     text-decoration: none;
 }
 
 #navbarLogo {
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
 }
 
-.langContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*padding: 0 2rem;*/
-}
-
-.selectedLang {
-    height: 100%;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-    color: var(--colorText);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.langContainer {
-    position: relative;
-}
-
-.langContainer ul {
-    background: var(--colorPanel);
-    border-radius: 0 0 0 8px;
-    border: 2px solid var(--colorSpec);
-    position: absolute;
-    top: 3rem;
-    right: -200%;
-    transition: all 0.2s ease;
-}
-
-.langContainer ul li {
-    padding: 0.5rem 1rem;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-.langContainer ul li img {
-    height: 1.5rem;
-    width: 1.5rem;
-    border-style: solid;
-    border-radius: 50%;
-    border-width: 2px;
-    border-color: var(--colorSpec);
-}
-
-.langContainer ul li a {
-    font-size: 1rem;
-    display: block;
-    color: var(--colorText);
-}
-
-.langContainer ul li:hover {
-    border-radius: 8px;
-    background-color: var(--colorSelection); 
-    transition: all 0.2s ease;
-}
-
-.langContainer.active ul{
-    right: 0;
-    transition: all 0.4s ease;
-}
-
-.selectedLang img {
-    height: 2rem;
-    width: 2rem;
-    border-style: solid;
-    border-radius: 50%;
-    border-width: 2px;
-    border-color: var(--colorSpec);
-}
 
 .navbarLink:hover { 
     background-color: var(--colorSelection); 
@@ -173,13 +95,7 @@ body, html {
       display: none;
     }
 
-    .selectedLang p {
-        display: none;
-    }
 
-    .langContainer ul li a {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 900px) {
