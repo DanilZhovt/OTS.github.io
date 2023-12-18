@@ -1,9 +1,9 @@
 :root {
     --colorBackground: #000000;
     --colorPanel: #000000;
-    --colorSelection: #dd4430;
-    --colorText: #c7945a;
-    --colorSpec: #dd4430;
+    --colorSelection: #00aff5;
+    --colorText: #084c8b;
+    --colorSpec: #00aff5;
 }
 
 body, html {
