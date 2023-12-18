@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SecureSensei</title>
+	<link rel="icon" type="image/png" href="pics/logo.png"/>
+	<meta property="og:image" content="pics/mbg.png"/>
+	<link rel="stylesheet" href="styles.css"/>
+	<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+	<!-- NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION NAVIGATION -->
+	<header class="navbar">
+		<a href="index.html" class="logoContainer mainLink">
+			<img src="pics/logo.png" alt="ea logo" id="navbarLogo">
+			<p>SecureSensei</p>
+		</a>
+		<div class="menuToggle">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+		<ul class="navbarMenu">
+			<a href="#section-1" class="navbarLink lngAbout mainLink" id="aboutButton">О нас</a>
+			<a href="#section-2" class="navbarLink lngDownload mainLink" id="downloadButton">Контакты</a>
+			<a href="#section-3" class="navbarLink mainLink">Обратная связь</a>
+		</ul>
+	</header>
+	<!-- BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY -->
+	<!-- COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER COVER -->
+	<div id="main">
+
+	</div>
+	<!-- INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO -->
+	<div id="info">
+		<div id = "section-1" class="infoGrid">
+			<div class="info1">
+				<a class="lngIntroduction">Вместе с совершенствованием информационных технологий появляются и новые угрозы, связанные с утечкой данных.</a>
+			</div>
+			<div class="info2">
+				<h1 class="lngWhyName">Вас защитим МЫ.</h1>
+				<a class="lngWhy">Компания SecureSensei предлагает Вам услуги проверки уровня кибербезопасности вашей компании, анализирует полученные данные и дает советы по улучшению безопасности Вашей сети.</a>
+			</div>
+			<img class="info3 infoImg" src="pics/index/map.jpg" alt="mapImg">
+			<div class="info4">
+				<h1 class="lngMapName">ОТРАЗИМ атаки.</h1>
+				<a class="lngMap">SecureSensei - специалист по различным видам кибератак:</a>
+				<ul>
+					<li class="lngSearchLi">SQL-инъекции</li>
+					<li class="lngTimeLi">XSS</li>
+					<li class="lngReviewsLi">Брутфорс-атаки</li>
+					<li class="lngFavsLi">MITM</li>
+				</ul>
+			</div>
+			<img class="info5 infoImg" src="pics/index/places.png" alt="placesImg">
+			<div class="info6">
+				<h1 class="lngPlacesName">ВОССТАНОВИМ павшие стены.</h1>
+				<a class="lngPlaces">SecureSensei выявляет и обезреживает уже имеющиеся угрозы, обеспечивает безопасность сетей, информации, а также поможет с аварийным восстановлением бизнеса.</a>
+			</div>
+			<div class="info7">
+				<div class="reviewsCont">
+					<img class="infoImg" src="pics/index/reviews.jpg" alt="reviewsImg">
+				</div>
+			</div>
+			<div class="info8">
+				<h1 class="lngReviewsName">Мы РЯДОМ</h1>
+				<a id="section-2" class="lngReviews">Компания SecureSensei предлагает индивидуальный подход к каждому клиенту и обеспечивает высококачественную поддержку.</a>
+			</div>
+			
+		</div>
+		<div class="downloadGrid">
+			<div class="downloadEntry">
+				<div class="downloadName">
+					<h1>Наш канал в Телеграме:</h1>
+				</div>
+				<a href="">
+					<img class="qrCode" src="pics/download/androidQr.jpg" alt="androidQr">
+				</a>
+			</div>
+		</div>
+		<div id="mainBigPanel">
+			<div class="contactUsText">
+				<h1 id="section-3">Обратная связь</h1>
+			</div>
+			<div id="mainPanel">
+				<form id="formBox" onsubmit="sendEmail();">
+					<a class="lngReadBefore"></a>
+					<div id="textBox">
+						<div id="detailsColumn">
+							<div class="column">
+								<a class="lngQType">Тип вопроса</a>
+								<select id="messageType" class="input">
+									<option value="AppTechQ" class="lngAppQ">Вопрос</option>
+									<option value="CoopQ" class="lngCoopQ">Предложение о сотрудничестве</option>
+									<option value="AppIdea" class="lngAppIdea">Проблемы</option>
+								</select>
+							</div>
+							<div class="column">
+								<a class="lngQEmail">Ваша почта</a>
+								<input class="input" type="text" id="mail" placeholder="samplemail@com.mail" required>
+							</div>
+							<div class="column">
+								<a class="lngQConfirm">Подтвердите почту</a>
+								<input class="input" type="text" id="mailTest" placeholder="samplemail@com.mail" required>
+								<a id="wrong" class="lngWrongEmail">Почты не совпадают</a>
+							</div>
+							<div class="column">
+								<a class="lngQSubject">Тема</a>
+								<input class="input" type="text" id="subject" required>
+							</div>
+						</div>
+						<div id="messageColumn">
+							<a class="lngQMessage">Сообщение</a>
+							<textarea class="input" id="message" cols="20" rows="15" required></textarea>
+						</div>
+					</div>
+					<div>
+						<button type="submit" class="lngContactSend input">Отправить</button>
+						<a id="sent" class="lngSentEmail">Отправлено!</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS -->
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="contactus.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
