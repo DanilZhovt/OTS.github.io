@@ -147,7 +147,7 @@
 
 #wrong {
     display: none;
-    color:darkred;
+    color:rgb(42, 5, 177);
 }
 
 #wrong.active {
@@ -156,7 +156,7 @@
 
 #sent {
     display: none;
-    color:darkgreen;
+    color:#084c8b;
 }
 
 #sent.active {
