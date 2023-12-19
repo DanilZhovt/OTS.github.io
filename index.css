@@ -1,5 +1,5 @@
 #main {
-    background-image: url('pics/mbg.jpg');
+    background-image: url('pics/download/Mbg.png');
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -74,6 +74,10 @@
     grid-area: info8;
 }
 
+.info9 {
+	grid-area: info9;
+}
+
 .info4 ul{
     position: relative;
     left: 1rem;
@@ -89,8 +93,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-		
-    
 }
 
 .downloadName img {
@@ -102,7 +104,8 @@
 	gap: 32px 32px;
 	grid-template-areas:
 			"info1 info2 info3"
-			"info4 info5 info6";
+			"info4 info5 info6"
+			"info7 info8 info9";
 	grid-template-columns: 1fr 1fr 1fr;
 	background: var(--colorBackground);
 	color: var(--colorText);
