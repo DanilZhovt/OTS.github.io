@@ -13,15 +13,6 @@ body, html {
     background: var(--colorBackground);
 }
 
-::-webkit-scrollbar {
-		
-    background: var(--colorPanel);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--colorSpec);
-}
-
 * {
     box-sizing: border-box;
     margin: 0;

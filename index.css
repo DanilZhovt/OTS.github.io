@@ -39,6 +39,8 @@
 .LANDING {
 	width:100%;
 	height:100%;
+	object-fit: cover; 
+	object-position: bottom; 
 }
 .info1 {
     grid-area: info1;
@@ -82,10 +84,13 @@
 }
 
 .downloadName {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--colorText);
+	color: var(--colorText);
+	display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+		
+    
 }
 
 .downloadName img {
@@ -93,16 +98,23 @@
 }
 
 .downloadGrid {
-    display: flex;
-    gap: 10vw;
-    gap: 10svw;
-    align-items: center;
-    justify-content: center;
+	display: grid;
+	gap: 32px 32px;
+	grid-template-areas:
+			"info1 info2 info3"
+			"info4 info5 info6";
+	grid-template-columns: 1fr 1fr 1fr;
+	background: var(--colorBackground);
+	color: var(--colorText);
+	border-top: 2px solid var(--colorSpec);
+	justify-items: center;
+	align-items: center;
+	place-items: center;
+	font-size: 1.5rem;
 }
 
 .downloadEntry {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
