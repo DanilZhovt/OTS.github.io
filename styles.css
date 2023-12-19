@@ -9,11 +9,12 @@
 body, html {
     font-family: tahoma, sans-serif;
     scrollbar-color: var(--colorSpec) var(--colorPanel);
-    scrollbar-width: thin;
+    scrollbar-width: 0;
     background: var(--colorBackground);
 }
 
 ::-webkit-scrollbar {
+		
     background: var(--colorPanel);
 }
 

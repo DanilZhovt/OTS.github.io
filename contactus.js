@@ -13,7 +13,7 @@ function sendEmail(){
         wrong.classList.remove('active');
         Email.send({
             SecureToken : "3b588c44-1ddf-466c-b8d2-207a7aeb752d",
-            To : 'VirmLeed@gmail.com',
+            To : 'serezgvozdkov@mail.ru',
             From : 'VirmLeed@gmail.com',
             Subject : type + ' // ' + subject.value,
             Body : message.value + '\n // ' + truemail.value,
