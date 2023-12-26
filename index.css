@@ -21,7 +21,7 @@
 
 .infoGrid {
     display: grid;
-    gap: 128px 64px;
+    gap: 128px 128px;
     padding: 64px;
     grid-template-areas:
         "info1 info2"
@@ -29,6 +29,8 @@
         "info6 info5"
         "info7 info8";
     grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+    overflow: hidden;
     background: var(--colorBackground);
     color: var(--colorText);
     border-top: 2px solid var(--colorSpec);
@@ -60,6 +62,7 @@
 
 .info5 {
     grid-area: info5;
+    padding-right: 30%;
 }
 
 .info6 {
@@ -78,13 +81,33 @@
 	grid-area: info9;
 }
 
+.info10 {
+    grid-area: info10;
+}
+
 .info4 ul{
     position: relative;
     left: 1rem;
 }
 
 .infoImg {
-    width: 25vw;
+    width: 50vw;
+}
+
+.infoText2 {
+    padding-right: 30%;
+}
+
+.infoText4 {
+    width: 50vw;
+}
+
+.infoText6 {
+    width: 40vw;
+}
+
+.infoText8 {
+    padding-right: 30%;
 }
 
 .downloadName {
@@ -104,7 +127,7 @@
 	gap: 32px 32px;
 	grid-template-areas:
 			"info1 info2 info3"
-			"info4 info5 info6"
+			"info4 info10 info6"
 			"info7 info8 info9";
 	grid-template-columns: 1fr 1fr 1fr;
 	background: var(--colorBackground);
