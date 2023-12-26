@@ -1,36 +1,56 @@
-let mail = document.getElementById("mail");
-let truemail = document.getElementById("mailTest");
-let type = document.getElementById("messageType").value;
-let subject = document.getElementById("subject");
-let message = document.getElementById("message");
-let form = document.getElementById("formBox");
-let weirdlettercollection = "1BDE0A7C3F893B90A2D371DEE3602DB7BF40";
-let wrong = document.getElementById("wrong");
-let sent = document.getElementById("sent");
+const applicantForm = document.getElementById('form')
+const sentText = document.getElementById('sent')
+applicantForm.addEventListener('submit', handleFormSubmit)
 
+function handleFormSubmit(event) {
+  event.preventDefault()
+  data = serializeForm(applicantForm)
+  sentText.classList.add('active')
+  applicantForm.reset()
 
+ subject = data[0].value
+ nameUser = data[1].value
+ email = data[2].value
+ tel = data[3].value
+ wantSpam = data[4].value
+ message = data[5].value
+ message = message.replaceAll("\n", "%0A")
 
-function sendTelega(){
-		console.log(message.value)
-		text = message.value
-		url=`https://api.telegram.org/bot6809638221:AAFmSOPVuXOaqo1AgQHDD8XL0H9X4jOA0cE/sendMessage?chat_id=-1002074351363&text=${text}`;
-		fetch(url)
-    if(!mail.value.localeCompare(truemail.value)){
-        wrong.classList.remove('active');
-        fetch(url).then(/*message => alert(message)*/);
-        sent.classList.add('active');
-        form.reset();
-        return false;
-    }else{
-        wrong.classList.add('active');
-        sent.classList.remove('active');
-        return false;
-    }
+ console.log(message)
+
+ if (wantSpam == true){
+  wantSpam = 'Да'
+ } else {
+  wantSpam = 'Нет'
+ }
+ Url = `https://api.telegram.org/bot6809638221:AAFmSOPVuXOaqo1AgQHDD8XL0H9X4jOA0cE/sendMessage?chat_id=-1002074351363&text=%0A
+ Новое обращение%0A
+ Тема: ${subject}%0A
+ ФИО: ${nameUser}%0A
+ Почта: ${email}%0A
+ Телефон: ${tel}%0A
+ Хочет получать рассылку: ${wantSpam}%0A
+ Дополнительное сообщение: %0A${message}`
+
+ sendTelega(Url)
 }
-/*Email.send({
-            SecureToken : "3b588c44-1ddf-466c-b8d2-207a7aeb752d",
-            To : 'serezgvozdkov@mail.ru',
-            From : 'VirmLeed@gmail.com',
-            Subject : type + ' // ' + subject.value,
-            Body : message.value + '\n // ' + truemail.value,
-        })*/
+
+function serializeForm(formNode) {
+  const { elements } = formNode
+
+  const data = Array.from(elements)
+    .map((element) => {
+      const { name, type } = element
+      const value = type === 'checkbox' ? element.checked : element.value
+
+      return { name, value }
+    })
+    .filter((item) => !!item.name)
+
+  console.log(data)
+ return data
+}
+
+function sendTelega(Url) {
+ fetch(Url)
+}

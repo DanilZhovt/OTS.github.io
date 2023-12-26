@@ -69,11 +69,26 @@
 			</div>
 			<div class="info8 infoText8">
 				<h1 class="lngReviewsName">Постоянная поддержка</h1>
-				<a id="section-3" class="lngReviews">Компания OptiLog предлагает индивидуальный подход к каждому клиенту и находится всегда на связи для решения каких-либо задач.</a>
+				<a class="lngReviews">Компания OptiLog предлагает индивидуальный подход к каждому клиенту и находится всегда на связи для решения каких-либо задач.</a>
 			</div>
 		</div>
 
-		<div class="downloadGrid">
+		<div id="tarif">
+			<div id = "section-2" class="downloadTarif">
+					<div class = "info12">
+						<h1 class="lngMapName">Общие принципы тарификации:</h1>
+
+						<div class = "info11">	
+					<ul>
+						<li class="lngSearchLi">Мы предлагаем на выбор две схемы тарификации: с ограничением по количеству машин/курьеров и с ограничением по количеству заказов</li>
+						<li class="lngTimeLi">Все тарифы включают в себя техническую поддержку 24×7</li>
+						<li class="lngReviewsLi">Для старта пробного периода оставьте заявку на демонстрацию. С вами свяжется наш специалист, познакомит с возможностями системы и расскажет, как провести тест на собственных данных и начать бесплатный пробный период</li>
+					</ul>
+					</div>						
+			</div>
+		</div>
+
+		<div id="section-3" class="downloadGrid">
 					<div class="info1">
 						<div class="downloadEntry">
 							<div class="downloadName">
@@ -131,42 +146,45 @@
 				<h1 id="section-4">Обратная связь</h1>
 			</div>
 			<div id="mainPanel">
-				<form id="formBox" onsubmit="sendTelega();">
+				<form id="form" onsubmit="">
 					<a class="lngReadBefore"></a>
 					<div id="textBox">
-						<div id="detailsColumn">
-							<div class="column">
-								<a class="lngQType">Тип вопроса</a>
-								<select id="messageType" class="input">
-									<option value="AppTechQ" class="lngAppQ">Вопрос</option>
-									<option value="CoopQ" class="lngCoopQ">Предложение о сотрудничестве</option>
-									<option value="AppIdea" class="lngAppIdea">Проблемы</option>
-								</select>
-							</div>
-							<div class="column">
-								<a class="lngQEmail">Ваша почта</a>
-								<input class="input" type="text" id="mail" placeholder="samplemail@com.mail" required>
-							</div>
-							<div class="column">
-								<a class="lngQConfirm">Подтвердите почту</a>
-								<input class="input" type="text" id="mailTest" placeholder="samplemail@com.mail" required>
-								<a id="wrong" class="lngWrongEmail">Почты не совпадают</a>
-							</div>
-							<div class="column">
-								<a class="lngQSubject">Тема</a>
-								<input class="input" type="text" id="subject" required>
-							</div>
-						</div>
-						<div id="messageColumn">
-							<a class="lngQMessage">Сообщение</a>
-							<textarea class="input" id="message" cols="20" rows="15" required></textarea>
-						</div>
+					 <div id="detailsColumn">
+					  <div class="column">
+					   <a class="lngQType">Тема</a>
+					   <select class="input" name="subject" id="messageType">
+						<option value="Подписаться на рассылку" class="lngAppQ">Подписаться на рассылку</option>
+						<option value="Предложение о сотрудничестве" class="lngCoopQ">Предложение о сотрудничестве</option>
+						<option value="Вопрос" class="lngAppIdea">Вопрос</option>
+					   </select>
+					  </div>
+					  <div class="column">
+					   <a class="lngQEmail">ФИО</a>
+					   <input class="input" type="text" name="name" id="name" placeholder="Иванов Иван Иванович" required>
+					  </div>
+					  <div class="column">
+					   <a class="lngQEmail">Ваша почта</a>
+					   <input class="input" type="email" name="email" id="email" placeholder="ivan@mail.ru" required>
+					  </div>
+					  <div class="column">
+					   <a class="lngQConfirm">Номер телефона</a>
+					   <input class="input" type="number" name="tel" placeholder="89123091210" required>
+					  </div>
+					  <div class="row">
+					   <a class="lngQSubject">Хочу получать рассылку</a>
+					   <input class="input" type="checkbox" name="needSpam" id="needSpam" value 1 checked="true">
+					  </div>
+					  <div class="row">
+					   <button type="submit" class="lngContactSend input">Отправить</button>
+					   <a id="sent" class="lngSentEmail">Отправлено!</a>
+					  </div>
+					 </div>
+					 <div id="messageColumn">
+					  <a class="lngQMessage">Дополнительное сообщение</a>
+					  <textarea class="input" id="message" name="message" cols="20" rows="15"></textarea>
+					 </div>
 					</div>
-					<div>
-						<button type="submit" class="lngContactSend input">Отправить</button>
-						<a id="sent" class="lngSentEmail">Отправлено!</a>
-					</div>
-				</form>
+				   </form>
 			</div>
 		</div>
 	</div>
