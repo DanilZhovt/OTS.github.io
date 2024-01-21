@@ -11,6 +11,7 @@ function handleFormSubmit(event) {
  subject = data[0].value
  nameUser = data[1].value
  email = data[2].value
+ 
  tel = data[3].value
  wantSpam = data[4].value
  message = data[5].value

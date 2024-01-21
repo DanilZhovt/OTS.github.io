@@ -199,20 +199,22 @@
 #mainPanel {
     background: var(--colorPanel);
     color: var(--colorText);
-    display: flex;
+    display: flex; 
     flex-direction: column;
     padding: 32px;
     border-radius: 16px;
+    
     border: 2px solid var(--colorSpec);
     width: 80vw;
     width: 80svw;
 }
 
+
 .contactUsText {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--colorText);
+    color: var(--colorText); 
 }
 
 #wrong {
